@@ -2,64 +2,64 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <!-- Strona główna -->
     <url>
-        <loc>https://tepodroze.pl/</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- O mnie -->
     <url>
-        <loc>https://tepodroze.pl/about</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/about</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Kontakt -->
     <url>
-        <loc>https://tepodroze.pl/contact</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/contact</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Polityka prywatności -->
     <url>
-        <loc>https://tepodroze.pl/privacy</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/privacy</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <!-- Artykuły -->
     <url>
-        <loc>https://tepodroze.pl/article/1</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/article/1</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://tepodroze.pl/article/2</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/article/2</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://tepodroze.pl/article/3</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/article/3</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://tepodroze.pl/article/4</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/article/4</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://tepodroze.pl/article/5</loc>
-        <lastmod>2023-10-01</lastmod>
+        <loc>https://tepodroze.netlify.app/article/5</loc>
+        <lastmod>2025-02-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
     </url>
