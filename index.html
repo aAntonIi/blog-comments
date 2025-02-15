@@ -1,14 +1,32 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Te Podróże - Blog podróżniczy o najpiękniejszych miejscach na świecie. Odkryj inspiracje, przewodniki i porady podróżnicze." />
+  <meta name="keywords" content="podróże, blog podróżniczy, zwiedzanie, przewodniki, inspiracje podróżnicze" />
+  <meta name="author" content="Twój Imię i Nazwisko" />
+  <title>Te Podróże - Blog podróżniczy o najpiękniejszych miejscach na świecie</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<div id="root"></div>
+<script type="module" src="/src/main.jsx"></script>
+</body>
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Te Podróże",
+    "url": "https://tepodroze.pl/",
+    "description": "Blog podróżniczy o najpiękniejszych miejscach na świecie. Odkryj inspiracje, przewodniki i porady podróżnicze.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://tepodroze.pl/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+</script>
 </html>

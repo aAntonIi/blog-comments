@@ -6,7 +6,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
-import Article from './pages/Article'; // Dodaj import
+import Article from './pages/Article';
+import NotFound from './pages/NotFound'; // Import komponentu NotFound
 
 const App = () => {
     return (
@@ -17,7 +18,8 @@ const App = () => {
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/privacy" element={<Privacy />} />
-                <Route path="/article/:id" element={<Article />} /> {/* Dodaj dynamiczną trasę */}
+                <Route path="/article/:id" element={<Article />} />
+                <Route path="*" element={<NotFound />} /> {/* Trasa dla strony 404 */}
             </Routes>
             <Footer />
         </Router>

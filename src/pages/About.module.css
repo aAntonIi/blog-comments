@@ -17,6 +17,56 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.profileImageContainer {
+    width: 220px; /* Początkowy rozmiar kontenera */
+    height: 220px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #007bff, #00bfff);
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease; /* Animacja dla kontenera */
+}
+
+.profileImageContainer:hover {
+    width: 200px; /* Nowy rozmiar kontenera po najechaniu */
+    height: 200px;
+    padding: 0; /* Usuwamy padding, aby kontener dopasował się do zdjęcia */
+}
+
+.profileImage {
+    width: 200px; /* Początkowy rozmiar zdjęcia */
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+    transition: all 0.3s ease; /* Animacja dla zdjęcia */
+}
+
+.profileImageContainer:hover .profileImage {
+    width: 200px; /* Nowy rozmiar zdjęcia po najechaniu */
+    height: 200px;
+}
+
+.socialLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 2rem;
+    color: #007bff;
+    transition: color 0.3s ease;
+}
+
+.icon:hover {
+    color: #0056b3;
+}
+
 .description {
     color: #333;
     font-size: 1.2rem;

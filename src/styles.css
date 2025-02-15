@@ -1,4 +1,9 @@
 /* styles.css - Style ogólne */
+
+@font-face {
+    font-family: 'Poppins';
+    font-display: swap;
+}
 body {
     margin: 0;
     padding: 0;
