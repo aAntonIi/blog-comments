@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Map from '../components/Map'; // Importuj Map
+import Map from '../components/Map';
+import Newsletter from '../components/Newsletter';
 import styles from './Home.module.css';
 
 const articles = [
@@ -44,7 +45,7 @@ const articles = [
 const Home = () => {
     return (
         <div className={styles.page}>
-            <h1 className={`${styles.mainTitle} ${styles.fadeIn}`}>Najnowsze artykuły</h1>
+            <h1 className={styles.mainTitle}>Najnowsze artykuły</h1>
             {articles.map((article) => (
                 <div key={article.id} className={styles.article}>
                     <img src={article.image} alt={article.title} className={styles.articleImage} />
@@ -55,9 +56,11 @@ const Home = () => {
                     </div>
                 </div>
             ))}
-            <Map articles={articles} /> {/* Przekaż artykuły do Map */}
+            <Map articles={articles} />
+            <Newsletter /> {/* Dodaj komponent Newsletter */}
         </div>
     );
+
 };
 
 export default Home;

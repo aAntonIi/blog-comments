@@ -1,0 +1,106 @@
+.newsletter {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 40px 0;
+}
+
+.title {
+    color: #1a1a1a;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.description {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 300px;
+    font-size: 1rem;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .newsletter {
+        padding: 30px 15px;
+    }
+
+    .title {
+        font-size: 1.75rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input {
+        max-width: 100%;
+    }
+
+    .button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .newsletter {
+        padding: 20px 10px;
+    }
+
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+}
+
+.error {
+    color: #ff6347; /* Czerwony kolor dla błędów */
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.success {
+    color: #28a745; /* Zielony kolor dla sukcesu */
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
