@@ -45,7 +45,7 @@ const articles = [
 const Home = () => {
     return (
         <div className={styles.page}>
-            <h1 className={styles.mainTitle}>Najnowsze artykuły</h1>
+            <h1 className={styles.mainTitle}>Test</h1>
             {articles.map((article) => (
                 <div key={article.id} className={styles.article}>
                     <img src={article.image} alt={article.title} className={styles.articleImage} />
