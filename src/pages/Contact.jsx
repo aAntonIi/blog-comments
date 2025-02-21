@@ -16,20 +16,16 @@ const Contact = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         alert(`Dziękujemy, ${formData.name}! Twoja wiadomość została wysłana.`);
-        setFormData({ name: '', email: '', message: '' }); // Resetowanie formularza
+        setFormData({ name: '', email: '', message: '' });
     };
 
     return (
         <div className={styles.page}>
             <h1 className={styles.title}>Kontakt</h1>
-
-            {/* Informacje kontaktowe */}
             <div className={styles.contactInfo}>
                 <p>Email: <a href="mailto:kontakt@tepodroze.pl">kontakt@tepodroze.pl</a></p>
                 <p>Telefon: +48 123 456 789</p>
             </div>
-
-            {/* Formularz kontaktowy */}
             <form onSubmit={handleSubmit} className={styles.form}>
                 <div className={styles.formGroup}>
                     <label htmlFor="name">Imię:</label>
@@ -65,8 +61,6 @@ const Contact = () => {
                 </div>
                 <button type="submit" className={styles.submitButton}>Wyślij</button>
             </form>
-
-
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import styles from './Article.module.css';
 
@@ -291,28 +291,26 @@ const articles = [
 
 ];
 
+
 const Article = () => {
     const { id } = useParams();
     const article = articles.find((a) => a.id === parseInt(id));
 
     useEffect(() => {
-        // Dodaj skrypt Utterances po załadowaniu komponentu
         const script = document.createElement('script');
         script.src = 'https://utteranc.es/client.js';
-        script.setAttribute('repo', 'aAntonii/blog-comments'); // Zastąp swoim repozytorium
-        script.setAttribute('issue-term', 'pathname'); // Użyj ścieżki URL jako identyfikatora
-        script.setAttribute('theme', 'github-light'); // Motyw
+        script.setAttribute('repo', 'aAntonii/blog-comments');
+        script.setAttribute('issue-term', 'pathname');
+        script.setAttribute('theme', 'github-light');
         script.setAttribute('crossorigin', 'anonymous');
         script.async = true;
 
-        // Znajdź kontener na komentarze i dodaj skrypt
         const commentsContainer = document.getElementById('utterances');
         if (commentsContainer) {
             commentsContainer.appendChild(script);
         }
 
         return () => {
-            // Usuń skrypt przy odmontowywaniu komponentu
             if (commentsContainer) {
                 commentsContainer.innerHTML = '';
             }
@@ -343,7 +341,6 @@ const Article = () => {
                     )}
                 </div>
             ))}
-            {/* Sekcja komentarzy Utterances */}
             <div id="utterances" className={styles.commentsSection}></div>
         </div>
     );

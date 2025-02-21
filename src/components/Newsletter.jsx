@@ -7,7 +7,7 @@ const Newsletter = () => {
     const [success, setSuccess] = useState('');
 
     const validateEmail = (email) => {
-        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Prosta walidacja e-mail
+        const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return regex.test(email);
     };
 
@@ -26,7 +26,6 @@ const Newsletter = () => {
             return;
         }
 
-        // Symulacja wysłania formularza
         setError('');
         setSuccess(`Dziękujemy za zapisanie się na newsletter, ${email}!`);
         setEmail('');

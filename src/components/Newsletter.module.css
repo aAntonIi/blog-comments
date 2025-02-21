@@ -1,3 +1,4 @@
+/* Newsletter.module.css */
 .newsletter {
     background-color: #f9f9f9;
     padding: 40px 20px;
@@ -5,6 +6,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     margin: 40px 0;
+    animation: fadeIn 1s ease-in;
 }
 
 .title {
@@ -50,6 +52,23 @@
     background-color: #0056b3;
 }
 
+.error {
+    color: #ff6347;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+.success {
+    color: #28a745;
+    font-size: 0.9rem;
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 /* Responsywność */
 @media (max-width: 768px) {
     .newsletter {
@@ -91,16 +110,4 @@
     .description {
         font-size: 0.9rem;
     }
-}
-
-.error {
-    color: #ff6347; /* Czerwony kolor dla błędów */
-    font-size: 0.9rem;
-    margin-top: 10px;
-}
-
-.success {
-    color: #28a745; /* Zielony kolor dla sukcesu */
-    font-size: 0.9rem;
-    margin-top: 10px;
 }

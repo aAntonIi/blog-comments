@@ -14,7 +14,6 @@ const MapComponent = ({ articles }) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        // Inicjalizacja mapy
         const map = new Map({
             target: mapRef.current,
             layers: [
@@ -23,22 +22,19 @@ const MapComponent = ({ articles }) => {
                 }),
             ],
             view: new View({
-                center: fromLonLat([19, 52]), // Centrum mapy (Polska)
+                center: fromLonLat([19, 52]),
                 zoom: 5,
             }),
             controls: defaultControls().extend([]),
         });
 
-        mapInstance.current = map; // Zapisz instancję mapy
+        mapInstance.current = map;
 
-        // Dodaj punkty na mapie na podstawie artykułów
         articles.forEach((article) => {
-            // Tworzymy element markera (tylko nazwa miasta)
             const markerElement = document.createElement('div');
             markerElement.className = styles.marker;
-            markerElement.innerHTML = `<span>${article.title}</span>`; // Tylko nazwa miasta
+            markerElement.innerHTML = `<span>${article.title}</span>`;
 
-            // Tworzymy element popupu (rozwinięte okienko)
             const popupElement = document.createElement('div');
             popupElement.className = styles.popup;
             popupElement.innerHTML = `
@@ -48,7 +44,6 @@ const MapComponent = ({ articles }) => {
                 <button class="${styles.closeButton}">×</button>
             `;
 
-            // Overlay dla markera (tylko nazwa miasta)
             const markerOverlay = new Overlay({
                 position: fromLonLat(article.lngLat),
                 element: markerElement,
@@ -56,7 +51,6 @@ const MapComponent = ({ articles }) => {
                 offset: [0, -20],
             });
 
-            // Overlay dla popupu (rozwinięte okienko)
             const popupOverlay = new Overlay({
                 position: fromLonLat(article.lngLat),
                 element: popupElement,
@@ -64,32 +58,24 @@ const MapComponent = ({ articles }) => {
                 offset: [0, -20],
             });
 
-            // Obsługa kliknięcia na marker (nazwa miasta)
             markerElement.addEventListener('click', () => {
-                // Pokaż popup dla tego markera
                 popupOverlay.setPosition(fromLonLat(article.lngLat));
-                // Wyśrodkuj mapę na markerze
                 map.getView().setCenter(fromLonLat(article.lngLat));
-                map.getView().setZoom(8); // Można dostosować zoom
+                map.getView().setZoom(8);
             });
 
-            // Obsługa kliknięcia przycisku "Czytaj dalej"
             popupElement.querySelector(`.${styles.readMoreButton}`).addEventListener('click', () => {
                 navigate(`/article/${article.id}`);
             });
 
-            // Obsługa kliknięcia przycisku zamknięcia (×)
             popupElement.querySelector(`.${styles.closeButton}`).addEventListener('click', () => {
-                // Ukryj tylko ten popup
                 popupOverlay.setPosition(undefined);
             });
 
-            // Dodaj oba overlay do mapy
             map.addOverlay(markerOverlay);
             map.addOverlay(popupOverlay);
         });
 
-        // Sprzątanie po komponencie
         return () => map.setTarget(null);
     }, [articles, navigate]);
 

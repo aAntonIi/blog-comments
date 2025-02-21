@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Map from '../components/Map';
 import Newsletter from '../components/Newsletter';
 import styles from './Home.module.css';
+
 
 const articles = [
     {
@@ -42,25 +43,49 @@ const articles = [
     },
 ];
 
+
 const Home = () => {
+    const [layout, setLayout] = useState('grid'); // Domyślny układ: siatka
+
     return (
         <div className={styles.page}>
             <h1 className={styles.mainTitle}>Najnowsze artykuły</h1>
-            {articles.map((article) => (
-                <div key={article.id} className={styles.article}>
-                    <img src={article.image} alt={article.title} className={styles.articleImage} />
-                    <div className={styles.articleContent}>
-                        <h2 className={styles.articleTitle}>{article.title}</h2>
-                        <p className={styles.articleExcerpt}>{article.excerpt}</p>
-                        <Link to={`/article/${article.id}`} className={styles.readMore}>Czytaj więcej</Link>
+
+            {/* Przyciski do zmiany układu */}
+            <div className={styles.layoutButtons}>
+
+                <button
+                    onClick={() => setLayout('list')}
+                    className={`${styles.layoutButton} ${layout === 'list' ? styles.active : ''}`}
+                >
+                    Lista
+                </button>
+                <button
+                    onClick={() => setLayout('grid')}
+                    className={`${styles.layoutButton} ${layout === 'grid' ? styles.active : ''}`}
+                >
+                    Siatka
+                </button>
+            </div>
+
+            {/* Kontener dla artykułów */}
+            <div className={`${styles.articlesContainer} ${styles[layout]}`}>
+                {articles.map((article) => (
+                    <div key={article.id} className={`${styles.article} ${styles[layout]}`}>
+                        <img src={article.image} alt={article.title} className={styles.articleImage} />
+                        <div className={styles.articleContent}>
+                            <h2 className={styles.articleTitle}>{article.title}</h2>
+                            <p className={styles.articleExcerpt}>{article.excerpt}</p>
+                            <Link to={`/article/${article.id}`} className={styles.readMore}>Czytaj więcej</Link>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
+
             <Map articles={articles} />
-            <Newsletter /> {/* Dodaj komponent Newsletter */}
+            <Newsletter />
         </div>
     );
-
 };
 
 export default Home;
