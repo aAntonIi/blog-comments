@@ -22,7 +22,7 @@ const MapComponent = ({ articles }) => {
                 }),
             ],
             view: new View({
-                center: fromLonLat([19, 52]),
+                center: fromLonLat([19, 52]), // Centrum mapy (Polska)
                 zoom: 5,
             }),
             controls: defaultControls().extend([]),
@@ -31,10 +31,12 @@ const MapComponent = ({ articles }) => {
         mapInstance.current = map;
 
         articles.forEach((article) => {
+            // Tworzymy element markera (tylko nazwa miasta)
             const markerElement = document.createElement('div');
             markerElement.className = styles.marker;
             markerElement.innerHTML = `<span>${article.title}</span>`;
 
+            // Tworzymy element popupu (rozwinięte okienko)
             const popupElement = document.createElement('div');
             popupElement.className = styles.popup;
             popupElement.innerHTML = `
@@ -44,6 +46,7 @@ const MapComponent = ({ articles }) => {
                 <button class="${styles.closeButton}">×</button>
             `;
 
+            // Overlay dla markera (tylko nazwa miasta)
             const markerOverlay = new Overlay({
                 position: fromLonLat(article.lngLat),
                 element: markerElement,
@@ -51,6 +54,7 @@ const MapComponent = ({ articles }) => {
                 offset: [0, -20],
             });
 
+            // Overlay dla popupu (rozwinięte okienko)
             const popupOverlay = new Overlay({
                 position: fromLonLat(article.lngLat),
                 element: popupElement,
@@ -58,24 +62,39 @@ const MapComponent = ({ articles }) => {
                 offset: [0, -20],
             });
 
+            // Ukryj popup domyślnie
+            popupOverlay.setPosition(undefined);
+
+            // Obsługa kliknięcia na marker (nazwa miasta)
             markerElement.addEventListener('click', () => {
+                // Pokaż popup dla tego markera
                 popupOverlay.setPosition(fromLonLat(article.lngLat));
+                // Przesuń marker w dół, aby nie zasłaniał popupu
+                markerOverlay.setOffset([0, -50]);
+                // Wyśrodkuj mapę na markerze
                 map.getView().setCenter(fromLonLat(article.lngLat));
                 map.getView().setZoom(8);
             });
 
+            // Obsługa kliknięcia przycisku "Czytaj dalej"
             popupElement.querySelector(`.${styles.readMoreButton}`).addEventListener('click', () => {
                 navigate(`/article/${article.id}`);
             });
 
+            // Obsługa kliknięcia przycisku zamknięcia (×)
             popupElement.querySelector(`.${styles.closeButton}`).addEventListener('click', () => {
+                // Ukryj popup
                 popupOverlay.setPosition(undefined);
+                // Przywróć marker na pierwotną pozycję
+                markerOverlay.setOffset([0, -20]);
             });
 
+            // Dodaj oba overlay do mapy
             map.addOverlay(markerOverlay);
             map.addOverlay(popupOverlay);
         });
 
+        // Sprzątanie po komponencie
         return () => map.setTarget(null);
     }, [articles, navigate]);
 
