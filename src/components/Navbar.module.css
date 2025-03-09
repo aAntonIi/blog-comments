@@ -50,16 +50,66 @@
     font-size: 1.2rem;
 }
 
+/* Przycisk hamburgera */
+.hamburger {
+    display: none; /* Domyślnie ukryty */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    padding: 0.5rem;
+}
+
+.hamburger:hover {
+    color: #ff6347;
+}
+
 /* Responsywność */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        padding: 1rem;
+    .hamburger {
+        display: block; /* Pokazuj przycisk na mniejszych ekranach */
     }
 
     .navLinks {
+        display: none; /* Ukryj menu na mniejszych ekranach */
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #1a1a1a;
+        width: 100%;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        animation: slideDown 0.3s ease-out;
+    }
+
+    .navLinks.open {
+        display: flex; /* Pokazuj menu, gdy jest otwarte */
+    }
+
+    .navLinks a {
+        padding: 0.5rem 1rem;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navLinks a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 4px;
+    }
+}
+
+/* Animacja dla rozwijanego menu */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
