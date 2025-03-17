@@ -16,7 +16,7 @@ const Privacy = () => {
             <section className={styles.section}>
                 <h2 className={styles.subtitle}>2. Dane osobowe</h2>
                 <p className={styles.text}>
-                    Administratorem danych osobowych jest Te Podróże z siedzibą w [adres]. Dane osobowe są przetwarzane w celu świadczenia usług, a także w celach marketingowych i statystycznych.
+                    Administratorem danych osobowych jest Te Podróże. Dane osobowe są przetwarzane w celu świadczenia usług, a także w celach marketingowych i statystycznych.
                 </p>
             </section>
 
