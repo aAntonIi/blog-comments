@@ -10,35 +10,35 @@ const articles = [
         id: 1,
         title: "Barcelona",
         excerpt: "Odkryj piękno Barcelony, od słynnej Sagrady Familii po tętniące życiem plaże Barcelonety.",
-        image: "/public/images/barcelona/barcelonaM.jpg",
+        image: "/images/barcelona/barcelonaM.jpg",
         lngLat: [2.15899, 41.38879], // Współrzędne Barcelony
     },
     {
         id: 2,
         title: "Paryż",
         excerpt: "Romantyczny weekend w stolicy Francji. Odwiedź Luwr, Wieżę Eiffla i Pola Elizejskie.",
-        image: "/public/images/paris/parisM.jpg",
+        image: "/images/paris/parisM.jpg",
         lngLat: [2.3522, 48.8566], // Współrzędne Paryża
     },
     {
         id: 3,
         title: "Kraków",
         excerpt: "Poznaj magiczne miejsca Krakowa, takie jak Rynek Główny, Wawel i Kazimierz.",
-        image: "/public/images/krakow/krakowM.jpg",
+        image: "/images/krakow/krakowM.jpg",
         lngLat: [19.9450, 50.0647], // Współrzędne Krakowa
     },
     {
         id: 4,
         title: "Zakopane",
         excerpt: "Odkryj uroki Zakopanego, od Gubałówki po Krupówki. Idealne miejsce na zimowy wypoczynek.",
-        image: "/public/images/zakopane/zakopaneM.jpg",
+        image: "/images/zakopane/zakopaneM.jpg",
         lngLat: [19.9489, 49.2992], // Współrzędne Zakopanego
     },
     {
         id: 5,
         title: "Wrocław",
         excerpt: "Poznaj Wrocław, miasto mostów, krasnali i pięknej architektury. Odwiedź Rynek i Ostrów Tumski.",
-        image: "/public/images/wroclaw/wroclawM.jpg",
+        image: "/images/wroclaw/wroclawM.jpg",
         lngLat: [17.0385, 51.1079], // Współrzędne Wrocławia
     },
 ];

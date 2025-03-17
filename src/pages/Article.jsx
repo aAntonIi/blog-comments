@@ -6,7 +6,7 @@ const articles = [
     {
         id: 1,
         title: "Wspaniała podróż do Barcelony",
-        image: "/public/images/barcelona/barcelona.jpg",
+        image: "/images/barcelona/barcelona.jpg",
         sections: [
             {
                 type: 'text',
@@ -14,7 +14,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/barcelona/barcelona1.jpg",
+                content: "/images/barcelona/barcelona1.jpg",
                 align: 'right',
                 caption: "Sagrada Família to ikona Barcelony."
             },
@@ -28,7 +28,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/barcelona/barcelona2.jpg",
+                content: "/images/barcelona/barcelona2.jpg",
                 align: 'center',
                 caption: "Park Güell to kolorowe dzieło Gaudíego."
             },
@@ -42,7 +42,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/barcelona/barcelona3.jpg",
+                content: "/images/barcelona/barcelona3.jpg",
                 align: 'left',
                 caption: "Plaża Barceloneta to raj dla miłośników słońca."
             },
@@ -63,7 +63,7 @@ const articles = [
     {
         id: 2,
         title: "Weekend w Paryżu",
-        image: "/public/images/paris/paris.jpg",
+        image: "/images/paris/paris.jpg",
         sections: [
             {
                 type: 'text',
@@ -71,7 +71,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/paris/paris1.jpg",
+                content: "/images/paris/paris1.jpg",
                 align: 'right',
                 caption: "Wieża Eiffla to symbol Paryża."
             },
@@ -85,7 +85,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/paris/paris2.jpg",
+                content: "/images/paris/paris2.jpg",
                 align: 'center',
                 caption: "Luwr to największe muzeum na świecie."
             },
@@ -99,7 +99,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/paris/paris3.jpg",
+                content: "/images/paris/paris3.jpg",
                 align: 'left',
                 caption: "Montmartre to serce artystycznego Paryża."
             },
@@ -120,7 +120,7 @@ const articles = [
     {
         id: 3,
         title: "Tajemnice Krakowa",
-        image: "/public/images/krakow/krakow.jpg",
+        image: "/images/krakow/krakow.jpg",
         sections: [
             {
                 type: 'text',
@@ -128,7 +128,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/krakow/krakow1.jpg",
+                content: "/images/krakow/krakow1.jpg",
                 align: 'right',
                 caption: "Rynek Główny to serce Krakowa."
             },
@@ -142,7 +142,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/krakow/krakow2.jpg",
+                content: "/images/krakow/krakow2.jpg",
                 align: 'center',
                 caption: "Zamek Królewski na Wawelu to ikona Krakowa."
             },
@@ -156,7 +156,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/krakow/krakow3.jpg",
+                content: "/images/krakow/krakow3.jpg",
                 align: 'left',
                 caption: "Kazimierz to serce żydowskiej kultury w Krakowie."
             },
@@ -177,7 +177,7 @@ const articles = [
     {
         id: 4,
         title: "Zakopane - zimowa stolica Polski",
-        image: "/public/images/zakopane/zakopane.jpg",
+        image: "/images/zakopane/zakopane.jpg",
         sections: [
             {
                 type: 'text',
@@ -185,7 +185,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/zakopane/zakopane1.jpg",
+                content: "/images/zakopane/zakopane1.jpg",
                 align: 'right',
                 caption: "Widok na Tatry z Zakopanego."
             },
@@ -199,7 +199,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/zakopane/zakopane2.jpg",
+                content: "/images/zakopane/zakopane2.jpg",
                 align: 'center',
                 caption: "Gubałówka to popularne miejsce widokowe."
             },
@@ -213,7 +213,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/zakopane/zakopane3.jpg",
+                content: "/images/zakopane/zakopane3.jpg",
                 align: 'left',
                 caption: "Morskie Oko to najpiękniejsze jezioro w Tatrach."
             },
@@ -234,7 +234,7 @@ const articles = [
     {
         id: 5,
         title: "Wrocław - miasto krasnali",
-        image: "/public/images/wroclaw/wroclaw.jpg",
+        image: "/images/wroclaw/wroclaw.jpg",
         sections: [
             {
                 type: 'text',
@@ -242,7 +242,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/wroclaw/wroclaw1.jpg",
+                content: "/images/wroclaw/wroclaw1.jpg",
                 align: 'right',
                 caption: "Rynek we Wrocławiu to serce miasta."
             },
@@ -256,7 +256,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/wroclaw/wroclaw2.jpg",
+                content: "/images/wroclaw/wroclaw2.jpg",
                 align: 'center',
                 caption: "Ostrów Tumski to najstarsza część Wrocławia."
             },
@@ -270,7 +270,7 @@ const articles = [
             },
             {
                 type: 'image',
-                content: "/public/images/wroclaw/wroclaw3.jpg",
+                content: "/images/wroclaw/wroclaw3.jpg",
                 align: 'left',
                 caption: "Krasnale to symbol Wrocławia."
             },
