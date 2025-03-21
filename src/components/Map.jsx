@@ -69,8 +69,8 @@ const MapComponent = ({ articles }) => {
             markerElement.addEventListener('click', () => {
                 // Pokaż popup dla tego markera
                 popupOverlay.setPosition(fromLonLat(article.lngLat));
-                // Przesuń marker w dół, aby nie zasłaniał popupu
-                markerOverlay.setOffset([0, -50]);
+                // Ukryj marker
+                markerElement.style.display = 'none';
                 // Wyśrodkuj mapę na markerze
                 map.getView().setCenter(fromLonLat(article.lngLat));
                 map.getView().setZoom(8);
@@ -85,8 +85,8 @@ const MapComponent = ({ articles }) => {
             popupElement.querySelector(`.${styles.closeButton}`).addEventListener('click', () => {
                 // Ukryj popup
                 popupOverlay.setPosition(undefined);
-                // Przywróć marker na pierwotną pozycję
-                markerOverlay.setOffset([0, -20]);
+                // Pokaż marker ponownie
+                markerElement.style.display = 'block';
             });
 
             // Dodaj oba overlay do mapy
