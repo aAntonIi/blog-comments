@@ -1,8 +1,6 @@
 [build]
 command = "npm run build"
-publish = "build"
+publish = "/opt/build/repo/build"
 
 [[plugins]]
 package = "netlify-plugin-cache-folder"
-[plugins.inputs]
-paths = ["public/images"]
