@@ -1,4 +1,3 @@
-/* Home.module.css */
 .page {
     padding: 20px;
     max-width: 1200px;
@@ -134,20 +133,22 @@
 
 /* Responsywność */
 @media (max-width: 768px) {
-    .mainTitle {
-        font-size: 2rem;
+    .layoutButtons {
+        display: none; /* Ukryj przyciski na urządzeniach mobilnych */
+    }
+
+    .articlesContainer {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .article {
+        width: 100%;
     }
 
     .articleImage {
         height: 150px;
-    }
-
-    .articleTitle {
-        font-size: 1.5rem;
-    }
-
-    .articleExcerpt {
-        font-size: 1rem;
     }
 
     .article.list {

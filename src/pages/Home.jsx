@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Map from '../components/Map';
 import Newsletter from '../components/Newsletter';
 import styles from './Home.module.css';
-
 
 const articles = [
     {
@@ -43,17 +42,33 @@ const articles = [
     },
 ];
 
-
 const Home = () => {
     const [layout, setLayout] = useState('grid'); // Domyślny układ: siatka
+
+    // Sprawdź szerokość ekranu i ustaw domyślny układ na mobilnych
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth <= 768) {
+                setLayout('list'); // Domyślny układ na mobilnych
+            } else {
+                setLayout('grid'); // Domyślny układ na desktopach
+            }
+        };
+
+        // Wywołaj funkcję przy załadowaniu i zmianie rozmiaru okna
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        // Oczyść event listener przy odmontowaniu komponentu
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     return (
         <div className={styles.page}>
             <h1 className={styles.mainTitle}>Najnowsze artykuły</h1>
 
-            {/* Przyciski do zmiany układu */}
+            {/* Przyciski do zmiany układu (widoczne tylko na desktopach) */}
             <div className={styles.layoutButtons}>
-
                 <button
                     onClick={() => setLayout('list')}
                     className={`${styles.layoutButton} ${layout === 'list' ? styles.active : ''}`}
